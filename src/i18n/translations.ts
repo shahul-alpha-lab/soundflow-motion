@@ -98,6 +98,11 @@ export const translations = {
       finalResonance: {
         title: "Final Resonance",
       },
+      // Piano Movement
+      pianoMovement: {
+        title: "The Piano Movement",
+        story: "Every key tells a story.",
+      },
     },
   },
   ar: {
@@ -198,6 +203,11 @@ export const translations = {
       // Final Resonance
       finalResonance: {
         title: "الصدى الأخير",
+      },
+      // Piano Movement
+      pianoMovement: {
+        title: "حركة البيانو",
+        story: "كل مفتاح يروي حكاية.",
       },
     },
   },
