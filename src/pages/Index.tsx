@@ -4,6 +4,7 @@ import PianoScrollAnimation from '@/components/PianoScrollAnimation';
 import AdvancedGuitarAnimation from '@/components/AdvancedGuitarAnimation';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
+import PianoMovementSection from '@/components/PianoMovementSection';
 import AboutSection from '@/components/AboutSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import ContactSection from '@/components/ContactSection';
@@ -27,6 +28,7 @@ const Index = () => {
         <AdvancedGuitarAnimation />
         <ServicesSection />
         <PortfolioSection />
+        <PianoMovementSection />
         <AboutSection />
         <WhyUsSection />
         <ContactSection />
