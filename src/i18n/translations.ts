@@ -94,6 +94,10 @@ export const translations = {
         tagline: "Turning sound into digital experiences",
         rights: "All rights reserved",
       },
+      // Final Resonance
+      finalResonance: {
+        title: "Final Resonance",
+      },
     },
   },
   ar: {
@@ -190,6 +194,10 @@ export const translations = {
       footer: {
         tagline: "نحوّل الصوت إلى تجارب رقمية",
         rights: "جميع الحقوق محفوظة",
+      },
+      // Final Resonance
+      finalResonance: {
+        title: "الصدى الأخير",
       },
     },
   },

@@ -7,6 +7,7 @@ import PortfolioSection from '@/components/PortfolioSection';
 import AboutSection from '@/components/AboutSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import ContactSection from '@/components/ContactSection';
+import FinalGuitarResonance from '@/components/FinalGuitarResonance';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
 import { useState } from 'react';
@@ -29,6 +30,7 @@ const Index = () => {
         <AboutSection />
         <WhyUsSection />
         <ContactSection />
+        <FinalGuitarResonance />
         <Footer />
       </main>
     </>
