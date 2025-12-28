@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Music, Video, Megaphone, Globe } from 'lucide-react';
 import ServiceCard from './ServiceCard';
+import ServicesBackground from './ServicesBackground';
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -31,6 +32,9 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="section-padding bg-background relative overflow-hidden">
+      {/* Musical Sound Wave Background */}
+      <ServicesBackground />
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div 
