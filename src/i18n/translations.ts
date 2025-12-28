@@ -103,6 +103,37 @@ export const translations = {
         title: "The Piano Movement",
         story: "Every key tells a story.",
       },
+      // Testimonials
+      testimonials: {
+        title: "What Our Clients Say",
+        subtitle: "Hear from the creative minds we've had the pleasure of working with",
+        clients: {
+          client1: {
+            name: "Sarah Mitchell",
+            role: "Creative Director",
+            company: "Harmonic Studios",
+            quote: "Their ability to blend sound and digital artistry is unmatched. They transformed our brand into a living, breathing experience.",
+          },
+          client2: {
+            name: "Ahmed Hassan",
+            role: "CEO",
+            company: "Digital Pulse Agency",
+            quote: "Working with this team was like watching magic unfold. Every project exceeded our expectations in creativity and execution.",
+          },
+          client3: {
+            name: "Elena Rodriguez",
+            role: "Marketing Lead",
+            company: "Rhythm Brands",
+            quote: "They don't just create content, they compose digital symphonies. Our engagement metrics have never been higher.",
+          },
+          client4: {
+            name: "Michael Chen",
+            role: "Product Manager",
+            company: "Wave Technologies",
+            quote: "The attention to detail and musical approach to design created an unforgettable user experience for our platform.",
+          },
+        },
+      },
       // Newsletter Popup
       newsletter: {
         headline: "Stay in tune with the digital movement.",
@@ -217,6 +248,37 @@ export const translations = {
       pianoMovement: {
         title: "حركة البيانو",
         story: "كل مفتاح يروي حكاية.",
+      },
+      // Testimonials
+      testimonials: {
+        title: "ماذا يقول عملاؤنا",
+        subtitle: "اسمع من العقول الإبداعية التي تشرفنا بالعمل معها",
+        clients: {
+          client1: {
+            name: "سارة ميتشل",
+            role: "المديرة الإبداعية",
+            company: "استوديوهات هارمونيك",
+            quote: "قدرتهم على مزج الصوت والفن الرقمي لا مثيل لها. لقد حولوا علامتنا التجارية إلى تجربة حية نابضة.",
+          },
+          client2: {
+            name: "أحمد حسن",
+            role: "الرئيس التنفيذي",
+            company: "وكالة النبض الرقمي",
+            quote: "العمل مع هذا الفريق كان كمشاهدة السحر يتكشف. كل مشروع تجاوز توقعاتنا في الإبداع والتنفيذ.",
+          },
+          client3: {
+            name: "إيلينا رودريغيز",
+            role: "مديرة التسويق",
+            company: "ريذم براندز",
+            quote: "إنهم لا يصنعون محتوى فحسب، بل يؤلفون سيمفونيات رقمية. لم تكن مقاييس التفاعل لدينا أعلى من أي وقت مضى.",
+          },
+          client4: {
+            name: "مايكل تشين",
+            role: "مدير المنتج",
+            company: "تكنولوجيا الموجة",
+            quote: "الاهتمام بالتفاصيل والنهج الموسيقي للتصميم خلق تجربة مستخدم لا تُنسى لمنصتنا.",
+          },
+        },
       },
       // Newsletter Popup
       newsletter: {
