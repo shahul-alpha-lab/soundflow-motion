@@ -11,6 +11,7 @@ import ContactSection from '@/components/ContactSection';
 import FinalGuitarResonance from '@/components/FinalGuitarResonance';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
+import NewsletterPopup from '@/components/NewsletterPopup';
 import { useState } from 'react';
 
 const Index = () => {
@@ -34,6 +35,7 @@ const Index = () => {
         <ContactSection />
         <FinalGuitarResonance />
         <Footer />
+        <NewsletterPopup />
       </main>
     </>
   );

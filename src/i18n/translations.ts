@@ -103,6 +103,15 @@ export const translations = {
         title: "The Piano Movement",
         story: "Every key tells a story.",
       },
+      // Newsletter Popup
+      newsletter: {
+        headline: "Stay in tune with the digital movement.",
+        subtext: "Get updates on how the world is evolving through digital tunes, motion, and technology.",
+        namePlaceholder: "Your name (optional)",
+        emailPlaceholder: "Your email address",
+        cta: "Join the Rhythm",
+        success: "You're now part of the rhythm.",
+      },
     },
   },
   ar: {
@@ -208,6 +217,15 @@ export const translations = {
       pianoMovement: {
         title: "حركة البيانو",
         story: "كل مفتاح يروي حكاية.",
+      },
+      // Newsletter Popup
+      newsletter: {
+        headline: "ابقَ على إيقاع التحوّل الرقمي.",
+        subtext: "احصل على تحديثات حول كيف يتحرّك العالم بإيقاع رقمي حديث.",
+        namePlaceholder: "اسمك (اختياري)",
+        emailPlaceholder: "بريدك الإلكتروني",
+        cta: "انضم إلى الإيقاع",
+        success: "أنت الآن جزء من الإيقاع.",
       },
     },
   },
