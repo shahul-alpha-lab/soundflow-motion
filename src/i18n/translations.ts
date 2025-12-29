@@ -107,6 +107,7 @@ export const translations = {
       testimonials: {
         title: "What Our Clients Say",
         subtitle: "Hear from the creative minds we've had the pleasure of working with",
+        watchVideo: "Watch Video",
         clients: {
           client1: {
             name: "Sarah Mitchell",
@@ -253,6 +254,7 @@ export const translations = {
       testimonials: {
         title: "ماذا يقول عملاؤنا",
         subtitle: "اسمع من العقول الإبداعية التي تشرفنا بالعمل معها",
+        watchVideo: "شاهد الفيديو",
         clients: {
           client1: {
             name: "سارة ميتشل",
