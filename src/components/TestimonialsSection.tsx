@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause, Video } from 'lucide-react';
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface Testimonial {
@@ -12,9 +12,6 @@ interface Testimonial {
   quote: string;
   rating: number;
   avatar: string;
-  hasVideo?: boolean;
-  videoUrl?: string;
-  videoPoster?: string;
 }
 
 const TestimonialsSection = () => {
@@ -22,9 +19,6 @@ const TestimonialsSection = () => {
   const { isRTL } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   const testimonials: Testimonial[] = [
     {
@@ -35,9 +29,6 @@ const TestimonialsSection = () => {
       quote: t('testimonials.clients.client1.quote'),
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face',
-      hasVideo: true,
-      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-      videoPoster: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=400&fit=crop',
     },
     {
       id: 2,
@@ -47,9 +38,6 @@ const TestimonialsSection = () => {
       quote: t('testimonials.clients.client2.quote'),
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-      hasVideo: true,
-      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-      videoPoster: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
     },
     {
       id: 3,
@@ -68,61 +56,24 @@ const TestimonialsSection = () => {
       quote: t('testimonials.clients.client4.quote'),
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      hasVideo: true,
-      videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
-      videoPoster: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=400&fit=crop',
     },
   ];
 
   const nextSlide = useCallback(() => {
-    setShowVideo(false);
-    setIsVideoPlaying(false);
     setDirection(isRTL ? -1 : 1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   }, [testimonials.length, isRTL]);
 
   const prevSlide = useCallback(() => {
-    setShowVideo(false);
-    setIsVideoPlaying(false);
     setDirection(isRTL ? 1 : -1);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   }, [testimonials.length, isRTL]);
 
-  // Auto-advance carousel (pause when video is playing)
+  // Auto-advance carousel
   useEffect(() => {
-    if (isVideoPlaying || showVideo) return;
     const interval = setInterval(nextSlide, 6000);
     return () => clearInterval(interval);
-  }, [nextSlide, isVideoPlaying, showVideo]);
-
-  // Handle video play/pause
-  const toggleVideo = () => {
-    if (!showVideo) {
-      setShowVideo(true);
-      setTimeout(() => {
-        if (videoRef.current) {
-          videoRef.current.play();
-          setIsVideoPlaying(true);
-        }
-      }, 300);
-    } else if (videoRef.current) {
-      if (isVideoPlaying) {
-        videoRef.current.pause();
-        setIsVideoPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsVideoPlaying(true);
-      }
-    }
-  };
-
-  const closeVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
-    setShowVideo(false);
-    setIsVideoPlaying(false);
-  };
+  }, [nextSlide]);
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -229,7 +180,7 @@ const TestimonialsSection = () => {
           </button>
 
           {/* Testimonial Card */}
-          <div className="relative min-h-[500px] md:min-h-[450px] flex items-center justify-center px-8">
+          <div className="relative min-h-[400px] md:min-h-[350px] flex items-center justify-center px-8">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -256,168 +207,9 @@ const TestimonialsSection = () => {
                     <Quote className="w-5 h-5 text-primary-foreground" />
                   </motion.div>
 
-                  {/* Video Thumbnail (if has video) */}
-                  {currentTestimonial.hasVideo && (
-                    <motion.div
-                      className="mb-6 mt-4 relative"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.25 }}
-                    >
-                      <AnimatePresence mode="wait">
-                        {!showVideo ? (
-                          <motion.div
-                            key="thumbnail"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
-                            className="relative cursor-pointer group mx-auto max-w-md"
-                            onClick={toggleVideo}
-                          >
-                            {/* Animated Thumbnail */}
-                            <div className="relative rounded-xl overflow-hidden aspect-video">
-                              <img
-                                src={currentTestimonial.videoPoster}
-                                alt={`${currentTestimonial.name} video testimonial`}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                              />
-                              
-                              {/* Animated overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-                              
-                              {/* Pulsing play button */}
-                              <motion.div
-                                className="absolute inset-0 flex items-center justify-center"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.3 }}
-                              >
-                                <motion.div
-                                  className="relative"
-                                  whileHover={{ scale: 1.1 }}
-                                  whileTap={{ scale: 0.95 }}
-                                >
-                                  {/* Pulse rings */}
-                                  <motion.div
-                                    className="absolute inset-0 rounded-full bg-primary/30"
-                                    animate={{
-                                      scale: [1, 1.5, 1.5],
-                                      opacity: [0.5, 0, 0],
-                                    }}
-                                    transition={{
-                                      duration: 2,
-                                      repeat: Infinity,
-                                      ease: 'easeOut',
-                                    }}
-                                  />
-                                  <motion.div
-                                    className="absolute inset-0 rounded-full bg-primary/20"
-                                    animate={{
-                                      scale: [1, 1.8, 1.8],
-                                      opacity: [0.3, 0, 0],
-                                    }}
-                                    transition={{
-                                      duration: 2,
-                                      repeat: Infinity,
-                                      ease: 'easeOut',
-                                      delay: 0.3,
-                                    }}
-                                  />
-                                  
-                                  {/* Play button */}
-                                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-glow relative z-10">
-                                    <Play className="w-6 h-6 text-primary-foreground ml-1" fill="currentColor" />
-                                  </div>
-                                </motion.div>
-                              </motion.div>
-
-                              {/* Video badge */}
-                              <motion.div
-                                className="absolute bottom-3 right-3 flex items-center gap-1.5 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium text-foreground"
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.5 }}
-                              >
-                                <Video className="w-3.5 h-3.5" />
-                                {t('testimonials.watchVideo')}
-                              </motion.div>
-
-                              {/* Animated border */}
-                              <motion.div
-                                className="absolute inset-0 rounded-xl border-2 border-primary/0 group-hover:border-primary/50 transition-colors duration-300"
-                                animate={{
-                                  boxShadow: [
-                                    '0 0 0 0 hsl(var(--primary) / 0)',
-                                    '0 0 20px 2px hsl(var(--primary) / 0.2)',
-                                    '0 0 0 0 hsl(var(--primary) / 0)',
-                                  ],
-                                }}
-                                transition={{ duration: 3, repeat: Infinity }}
-                              />
-                            </div>
-                          </motion.div>
-                        ) : (
-                          <motion.div
-                            key="video"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
-                            className="relative mx-auto max-w-md"
-                          >
-                            <div className="relative rounded-xl overflow-hidden aspect-video bg-background">
-                              <video
-                                ref={videoRef}
-                                src={currentTestimonial.videoUrl}
-                                poster={currentTestimonial.videoPoster}
-                                className="w-full h-full object-cover"
-                                onEnded={() => {
-                                  setIsVideoPlaying(false);
-                                  closeVideo();
-                                }}
-                              />
-                              
-                              {/* Video Controls Overlay */}
-                              <motion.div
-                                className="absolute inset-0 flex items-center justify-center bg-background/20 opacity-0 hover:opacity-100 transition-opacity duration-300"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.5 }}
-                              >
-                                <motion.button
-                                  className="w-14 h-14 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
-                                  onClick={toggleVideo}
-                                  whileHover={{ scale: 1.1 }}
-                                  whileTap={{ scale: 0.95 }}
-                                >
-                                  {isVideoPlaying ? (
-                                    <Pause className="w-5 h-5" />
-                                  ) : (
-                                    <Play className="w-5 h-5 ml-0.5" fill="currentColor" />
-                                  )}
-                                </motion.button>
-                              </motion.div>
-
-                              {/* Close button */}
-                              <motion.button
-                                className="absolute top-3 right-3 w-8 h-8 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center text-foreground hover:bg-destructive hover:text-destructive-foreground transition-colors duration-300"
-                                onClick={closeVideo}
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.3 }}
-                                whileHover={{ scale: 1.1 }}
-                              >
-                                ✕
-                              </motion.button>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                  )}
-
                   {/* Stars */}
                   <motion.div
-                    className={`flex items-center justify-center gap-1 mb-6 ${currentTestimonial.hasVideo ? '' : 'mt-4'}`}
+                    className="flex items-center justify-center gap-1 mb-6 mt-4"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
@@ -471,17 +263,6 @@ const TestimonialsSection = () => {
                         }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
-                      {/* Video indicator badge */}
-                      {currentTestimonial.hasVideo && (
-                        <motion.div
-                          className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center"
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.7, type: 'spring' }}
-                        >
-                          <Video className="w-3 h-3 text-primary-foreground" />
-                        </motion.div>
-                      )}
                     </div>
                     <div className="text-center">
                       <h4 className="font-semibold text-foreground">
@@ -497,35 +278,22 @@ const TestimonialsSection = () => {
             </AnimatePresence>
           </div>
 
-          {/* Dots Navigation with Video Indicators */}
-          <div className="flex items-center justify-center gap-3 mt-8">
-            {testimonials.map((testimonial, index) => (
+          {/* Dots Navigation */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => {
-                  setShowVideo(false);
-                  setIsVideoPlaying(false);
                   setDirection(index > currentIndex ? 1 : -1);
                   setCurrentIndex(index);
                 }}
-                className={`relative transition-all duration-300 ${
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? 'w-10 h-3 rounded-full bg-primary'
-                    : 'w-3 h-3 rounded-full bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                    ? 'bg-primary w-8'
+                    : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
-              >
-                {testimonial.hasVideo && index !== currentIndex && (
-                  <motion.div
-                    className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-primary"
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.7, 1, 0.7],
-                    }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                )}
-              </button>
+              />
             ))}
           </div>
         </div>
