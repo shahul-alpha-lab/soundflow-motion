@@ -64,6 +64,13 @@ export const translations = {
           description: "Stunning, performant websites that create immersive digital experiences.",
         },
       },
+      // Founder About Section
+      founderAbout: {
+        label: "ABOUT US",
+        headline: "Driven by Passion. Powered by Music.",
+        description: "We are a creative digital studio where music, emotion, and technology come together. Founded with a deep love for sound and storytelling, we transform musical ideas into immersive digital experiences that connect, inspire, and move audiences.",
+        quote: "Founded by creators who believe music is more than sound — it's emotion.",
+      },
       // Story Section
       story: {
         title: "When music moves, ideas travel — and experiences are born.",
@@ -236,6 +243,13 @@ export const translations = {
           title: "تصميم وتطوير المواقع",
           description: "مواقع مذهلة وعالية الأداء تخلق تجارب رقمية غامرة.",
         },
+      },
+      // Founder About Section
+      founderAbout: {
+        label: "من نحن",
+        headline: "مدفوعون بالشغف. مدعومون بالموسيقى.",
+        description: "نحن استوديو رقمي إبداعي حيث تلتقي الموسيقى والعاطفة والتكنولوجيا. تأسسنا بحب عميق للصوت والسرد القصصي، ونحوّل الأفكار الموسيقية إلى تجارب رقمية غامرة تربط وتلهم وتحرك الجماهير.",
+        quote: "أسسها مبدعون يؤمنون أن الموسيقى أكثر من مجرد صوت — إنها عاطفة.",
       },
       // Story Section
       story: {
