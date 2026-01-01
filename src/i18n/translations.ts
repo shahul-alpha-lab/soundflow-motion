@@ -15,6 +15,33 @@ export const translations = {
         subtitle: "Where music, motion, and technology merge into storytelling",
         cta: "Explore Our Work",
         ctaSecondary: "Get in Touch",
+        slides: {
+          1: {
+            tagline: "WHERE MUSIC, MOTION, AND TECHNOLOGY MERGE",
+            headline: "We Turn Sound into Digital Experiences",
+            subtext: "Crafting immersive sonic journeys that captivate and inspire",
+          },
+          2: {
+            tagline: "EMOTION POWERED BY INNOVATION",
+            headline: "Where Emotion Meets Sound",
+            subtext: "Music powered by love, creativity, and technology",
+          },
+          3: {
+            tagline: "LIMITLESS AUDIO CREATIVITY",
+            headline: "Digital Sound, Infinite Possibilities",
+            subtext: "Pushing the boundaries of audio innovation",
+          },
+          4: {
+            tagline: "PRECISION MEETS CREATIVITY",
+            headline: "Engineering Rhythm Through Technology",
+            subtext: "Where circuits pulse with musical energy",
+          },
+          5: {
+            tagline: "TOMORROW'S SOUNDSCAPE TODAY",
+            headline: "The Future of Music Experiences",
+            subtext: "Pioneering the next generation of digital artistry",
+          },
+        },
       },
       // Services
       services: {
@@ -161,6 +188,33 @@ export const translations = {
         subtitle: "حيث تلتقي الموسيقى والحركة والتكنولوجيا في سرد قصصي فريد",
         cta: "استكشف أعمالنا",
         ctaSecondary: "تواصل معنا",
+        slides: {
+          1: {
+            tagline: "حيث تلتقي الموسيقى والحركة والتكنولوجيا",
+            headline: "نحوّل الصوت إلى تجارب رقمية",
+            subtext: "نصنع رحلات صوتية غامرة تأسر وتلهم",
+          },
+          2: {
+            tagline: "المشاعر مدعومة بالابتكار",
+            headline: "حيث تلتقي المشاعر بالصوت",
+            subtext: "موسيقى مدعومة بالحب والإبداع والتكنولوجيا",
+          },
+          3: {
+            tagline: "إبداع صوتي بلا حدود",
+            headline: "صوت رقمي، إمكانيات لا نهائية",
+            subtext: "ندفع حدود الابتكار الصوتي",
+          },
+          4: {
+            tagline: "الدقة تلتقي بالإبداع",
+            headline: "هندسة الإيقاع من خلال التكنولوجيا",
+            subtext: "حيث تنبض الدوائر بطاقة موسيقية",
+          },
+          5: {
+            tagline: "المشهد الصوتي للغد اليوم",
+            headline: "مستقبل التجارب الموسيقية",
+            subtext: "نرسم ملامح الجيل القادم من الفن الرقمي",
+          },
+        },
       },
       // Services
       services: {
