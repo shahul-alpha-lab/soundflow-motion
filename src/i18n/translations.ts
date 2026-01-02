@@ -11,10 +11,17 @@ export const translations = {
       },
       // Hero Section
       hero: {
+        tagline: "WHERE MUSIC, MOTION, AND TECHNOLOGY MERGE",
         title: "We Turn Sound into Digital Experiences",
         subtitle: "Where music, motion, and technology merge into storytelling",
         cta: "Explore Our Work",
         ctaSecondary: "Get in Touch",
+        scroll: "Scroll",
+        stats: {
+          projects: "Projects",
+          clients: "Clients",
+          years: "Years",
+        },
         slides: {
           1: {
             tagline: "WHERE MUSIC, MOTION, AND TECHNOLOGY MERGE",
@@ -191,10 +198,17 @@ export const translations = {
       },
       // Hero Section
       hero: {
+        tagline: "حيث تلتقي الموسيقى والحركة والتكنولوجيا",
         title: "نحوّل الصوت إلى تجربة رقمية نابضة بالحياة",
         subtitle: "حيث تلتقي الموسيقى والحركة والتكنولوجيا في سرد قصصي فريد",
         cta: "استكشف أعمالنا",
         ctaSecondary: "تواصل معنا",
+        scroll: "تمرير",
+        stats: {
+          projects: "مشروع",
+          clients: "عميل",
+          years: "سنوات",
+        },
         slides: {
           1: {
             tagline: "حيث تلتقي الموسيقى والحركة والتكنولوجيا",
