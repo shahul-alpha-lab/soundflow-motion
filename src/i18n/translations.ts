@@ -71,6 +71,33 @@ export const translations = {
           description: "Stunning, performant websites that create immersive digital experiences.",
         },
       },
+      // Services Showcase
+      servicesShowcase: {
+        label: "WHAT WE DO",
+        title: "Professional Audio Services",
+        subtitle: "From raw recordings to polished masterpieces, we bring your sound to life",
+        learnMore: "Learn More",
+        mixing: {
+          title: "Sound Mixing",
+          description: "A professional blend of clarity, depth, and emotion. We balance every element to create the perfect sonic landscape.",
+        },
+        recording: {
+          title: "Voice Recording",
+          description: "Capture the raw emotion and power of your voice in our state-of-the-art recording environment.",
+        },
+        mastering: {
+          title: "Track Mastering",
+          description: "The final polish that transforms your mix into a release-ready masterpiece with commercial loudness and clarity.",
+        },
+        editing: {
+          title: "Audio Editing",
+          description: "Precision editing that shapes your raw recordings into seamless, professional productions.",
+        },
+        restoration: {
+          title: "Audio Restoration",
+          description: "Breathe new life into vintage recordings or repair damaged audio with advanced restoration techniques.",
+        },
+      },
       // Founder About Section
       founderAbout: {
         label: "ABOUT US",
@@ -256,6 +283,33 @@ export const translations = {
         web: {
           title: "تصميم وتطوير المواقع",
           description: "مواقع مذهلة وعالية الأداء تخلق تجارب رقمية غامرة.",
+        },
+      },
+      // Services Showcase
+      servicesShowcase: {
+        label: "ماذا نفعل",
+        title: "خدمات صوتية احترافية",
+        subtitle: "من التسجيلات الخام إلى الروائع المصقولة، نحيي صوتك",
+        learnMore: "اعرف المزيد",
+        mixing: {
+          title: "مزج الصوت",
+          description: "مزيج احترافي من الوضوح والعمق والعاطفة. نوازن كل عنصر لخلق المشهد الصوتي المثالي.",
+        },
+        recording: {
+          title: "تسجيل الصوت",
+          description: "التقط العاطفة الخام وقوة صوتك في بيئة التسجيل المتطورة لدينا.",
+        },
+        mastering: {
+          title: "إتقان المسارات",
+          description: "اللمسة النهائية التي تحول مزيجك إلى تحفة جاهزة للإصدار بجهارة ووضوح تجاري.",
+        },
+        editing: {
+          title: "تحرير الصوت",
+          description: "تحرير دقيق يشكل تسجيلاتك الخام إلى إنتاجات سلسة واحترافية.",
+        },
+        restoration: {
+          title: "استعادة الصوت",
+          description: "بث حياة جديدة في التسجيلات القديمة أو إصلاح الصوت التالف بتقنيات استعادة متقدمة.",
         },
       },
       // Founder About Section

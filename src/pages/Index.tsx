@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import PianoScrollAnimation from '@/components/PianoScrollAnimation';
 import AdvancedGuitarAnimation from '@/components/AdvancedGuitarAnimation';
 import ServicesSection from '@/components/ServicesSection';
+import ServicesShowcase from '@/components/ServicesShowcase';
 import FounderAboutSection from '@/components/FounderAboutSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import PianoMovementSection from '@/components/PianoMovementSection';
@@ -30,6 +31,7 @@ const Index = () => {
         <PianoScrollAnimation />
         <AdvancedGuitarAnimation />
         <ServicesSection />
+        <ServicesShowcase />
         <FounderAboutSection />
         <PortfolioSection />
         <PianoMovementSection />
