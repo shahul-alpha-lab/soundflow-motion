@@ -5,6 +5,7 @@ import AdvancedGuitarAnimation from '@/components/AdvancedGuitarAnimation';
 import ServicesSection from '@/components/ServicesSection';
 import ServicesShowcase from '@/components/ServicesShowcase';
 import FounderAboutSection from '@/components/FounderAboutSection';
+import FeaturedProjects from '@/components/FeaturedProjects';
 import PortfolioSection from '@/components/PortfolioSection';
 import PianoMovementSection from '@/components/PianoMovementSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -33,6 +34,7 @@ const Index = () => {
         <ServicesSection />
         <ServicesShowcase />
         <FounderAboutSection />
+        <FeaturedProjects />
         <PortfolioSection />
         <PianoMovementSection />
         <TestimonialsSection />

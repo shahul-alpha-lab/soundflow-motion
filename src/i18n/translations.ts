@@ -110,6 +110,15 @@ export const translations = {
         title: "When music moves, ideas travel — and experiences are born.",
         subtitle: "Our Creative Philosophy",
       },
+      // Featured Projects
+      featuredProjects: {
+        label: "PORTFOLIO",
+        title: "Featured projects",
+        subtitle: "Explore a selection of projects blending creativity with practical design",
+        allWorks: "All Works",
+        viewProject: "View Project",
+        scrollHint: "Scroll to explore",
+      },
       // Portfolio
       portfolio: {
         title: "Our Work",
@@ -337,6 +346,15 @@ export const translations = {
       story: {
         title: "عندما تتحرّك الموسيقى، تسافر الأفكار، وتولد التجربة.",
         subtitle: "فلسفتنا الإبداعية",
+      },
+      // Featured Projects
+      featuredProjects: {
+        label: "معرض الأعمال",
+        title: "مشاريع مميزة",
+        subtitle: "استكشف مجموعة من المشاريع التي تجمع بين الإبداع والتصميم العملي",
+        allWorks: "جميع الأعمال",
+        viewProject: "عرض المشروع",
+        scrollHint: "مرر للاستكشاف",
       },
       // Portfolio
       portfolio: {
