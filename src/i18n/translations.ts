@@ -146,6 +146,20 @@ export const translations = {
           years: "Years Experience",
         },
       },
+      // Why Us Feature Section
+      whyUsFeature: {
+        label: "WHY CHOOSE US",
+        headline: "A Creative Space Where Sound Becomes Motion",
+        description: "Step into a futuristic music studio where technology, rhythm, and creativity merge into immersive experiences. We transform sonic ideas into visual journeys that captivate and inspire.",
+        feature1: "Immersive 3D sound environments",
+        feature2: "Motion-driven music visualization",
+        feature3: "Collaborative digital music creation",
+        stats: {
+          years: "Years of Sonic Innovation",
+          projects: "Audio Projects Crafted",
+          artists: "Artists & Creators Connected",
+        },
+      },
       // Contact
       contact: {
         title: "Let's Create Together",
@@ -358,6 +372,20 @@ export const translations = {
           clients: "عميل سعيد",
           awards: "جائزة صناعية",
           years: "سنوات خبرة",
+        },
+      },
+      // Why Us Feature Section
+      whyUsFeature: {
+        label: "لماذا تختارنا",
+        headline: "مساحة إبداعية حيث يتحول الصوت إلى حركة",
+        description: "ادخل إلى استوديو موسيقي مستقبلي حيث تندمج التكنولوجيا والإيقاع والإبداع في تجارب غامرة. نحوّل الأفكار الصوتية إلى رحلات بصرية تأسر وتلهم.",
+        feature1: "بيئات صوتية ثلاثية الأبعاد غامرة",
+        feature2: "تصور موسيقي مدفوع بالحركة",
+        feature3: "إبداع موسيقي رقمي تعاوني",
+        stats: {
+          years: "سنوات من الابتكار الصوتي",
+          projects: "مشروع صوتي منجز",
+          artists: "فنان ومبدع متصل",
         },
       },
       // Contact
