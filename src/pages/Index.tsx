@@ -13,6 +13,8 @@ import AboutSection from '@/components/AboutSection';
 import WhyUsSection from '@/components/WhyUsSection';
 import ContactSection from '@/components/ContactSection';
 import FinalGuitarResonance from '@/components/FinalGuitarResonance';
+import CreativeMenuSection from '@/components/CreativeMenuSection';
+import FloatingMenuButton from '@/components/FloatingMenuButton';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
 import NewsletterPopup from '@/components/NewsletterPopup';
@@ -28,6 +30,7 @@ const Index = () => {
       )}
       <main className={`min-h-screen bg-background overflow-x-hidden ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}`}>
         <Navbar />
+        <FloatingMenuButton />
         <HeroSection />
         <PianoScrollAnimation />
         <AdvancedGuitarAnimation />
@@ -42,6 +45,7 @@ const Index = () => {
         <WhyUsSection />
         <ContactSection />
         <FinalGuitarResonance />
+        <CreativeMenuSection />
         <Footer />
         <NewsletterPopup />
       </main>
