@@ -1,6 +1,13 @@
 export const translations = {
   en: {
     translation: {
+      creativeMenu: {
+        home: 'Home',
+        works: 'Works',
+        pages: 'Pages',
+        insights: 'Insights',
+        contact: 'Contact',
+      },
       // Navigation
       nav: {
         home: "Home",
@@ -238,6 +245,13 @@ export const translations = {
   },
   ar: {
     translation: {
+      creativeMenu: {
+        home: 'الرئيسية',
+        works: 'الأعمال',
+        pages: 'الصفحات',
+        insights: 'رؤى',
+        contact: 'تواصل',
+      },
       // Navigation
       nav: {
         home: "الرئيسية",
