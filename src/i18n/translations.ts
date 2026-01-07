@@ -241,6 +241,18 @@ export const translations = {
         cta: "Join the Rhythm",
         success: "You're now part of the rhythm.",
       },
+      // Sponsorship Section
+      sponsorship: {
+        label: "Sponsorship Program",
+        headline1: "Support the Sound of Innovation",
+        headline2: "Become a Creative Sponsor",
+        headline3: "Power the Future of Music & Technology",
+        subtext1: "Join our official sponsorship program",
+        subtext2: "Your support helps creativity grow",
+        subtext3: "Partner with innovation and sound",
+        official: "Official Sponsorship Program",
+        payNow: "Pay Now",
+      },
     },
   },
   ar: {
@@ -484,6 +496,18 @@ export const translations = {
         emailPlaceholder: "بريدك الإلكتروني",
         cta: "انضم إلى الإيقاع",
         success: "أنت الآن جزء من الإيقاع.",
+      },
+      // Sponsorship Section
+      sponsorship: {
+        label: "برنامج الرعاية",
+        headline1: "ادعم صوت الابتكار",
+        headline2: "كن راعياً إبداعياً",
+        headline3: "ادعم مستقبل الموسيقى والتكنولوجيا",
+        subtext1: "انضم إلى برنامج الرعاية الرسمي",
+        subtext2: "دعمك يساعد الإبداع على النمو",
+        subtext3: "شارك مع الابتكار والصوت",
+        official: "برنامج الرعاية الرسمي",
+        payNow: "ادفع الآن",
       },
     },
   },
