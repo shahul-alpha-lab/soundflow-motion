@@ -11,6 +11,7 @@ import PianoMovementSection from '@/components/PianoMovementSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import AboutSection from '@/components/AboutSection';
 import WhyUsSection from '@/components/WhyUsSection';
+import IndustriesSection from '@/components/IndustriesSection';
 import SponsorshipSection from '@/components/SponsorshipSection';
 import ContactSection from '@/components/ContactSection';
 import FinalGuitarResonance from '@/components/FinalGuitarResonance';
@@ -44,6 +45,7 @@ const Index = () => {
         <TestimonialsSection />
         <AboutSection />
         <WhyUsSection />
+        <IndustriesSection />
         <SponsorshipSection />
         <ContactSection />
         <FinalGuitarResonance />
